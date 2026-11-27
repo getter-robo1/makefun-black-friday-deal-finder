@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealHunt — Black Friday &amp; Cyber Monday 2026 deals, checked today</title>
+<meta name="description" content="A Black Friday deal finder where every price was checked on 27 November 2026 at its store or in a deals source naming the store — with an honest verdict on whether each sale is really a deal.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d61f2c'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='14' font-weight='bold' fill='white' text-anchor='middle'%3EDH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#">
+      <span class="brand-mark" aria-hidden="true">DH</span>
+      <span class="brand-name">DealHunt</span>
+    </a>
+    <span class="season-pill">Black Friday &amp; Cyber Monday 2026</span>
+    <span class="topbar-note" id="topbar-note">24 deals · checked today</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Black Friday deals, checked — not guessed.</h1>
+    <p class="hero-sub">Every price below was read on <strong>27 November 2026</strong> at its store or in a deals source that names the store — with its check time, source, and an honest verdict on whether the sale is real.</p>
+    <dl class="stats" id="stats">
+      <div class="stat"><dt>Deals checked</dt><dd id="stat-deals">24</dd></div>
+      <div class="stat"><dt>Stores</dt><dd id="stat-stores">5</dd></div>
+      <div class="stat"><dt>Average discount</dt><dd id="stat-avg">−45%</dd></div>
+      <div class="stat"><dt>Deepest cut</dt><dd id="stat-best">−71%</dd></div>
+    </dl>
+  </section>
+
+  <section class="controls" aria-label="Find a deal">
+    <div class="controls-row">
+      <label class="search-box">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Search deals, stores, products…" autocomplete="off">
+      </label>
+      <label class="select-wrap">Store
+        <select id="store-filter"></select>
+      </label>
+      <label class="select-wrap">Discount
+        <select id="discount-filter">
+          <option value="0">Any discount</option>
+          <option value="20">20% or more</option>
+          <option value="40">40% or more</option>
+          <option value="50">50% or more</option>
+        </select>
+      </label>
+      <label class="select-wrap">Sort by
+        <select id="sort">
+          <option value="best">Best deals first</option>
+          <option value="discount">Biggest discount</option>
+          <option value="price-asc">Lowest price</option>
+          <option value="price-desc">Highest price</option>
+        </select>
+      </label>
+    </div>
+    <div class="chips" id="category-chips" role="group" aria-label="Category"></div>
+    <p class="result-count" id="result-count" aria-live="polite">Showing 24 of 24 deals</p>
+  </section>
+
+  <section id="deal-grid" class="grid" aria-label="Deals"></section>
+
+  <section id="empty-state" class="empty" hidden>
+    <h2>No deals match those filters.</h2>
+    <p>Try a different search, or clear the filters to see all 24 checked deals.</p>
+    <button id="reset-filters" type="button">Show all deals</button>
+  </section>
+
+  <section class="method" aria-label="How deals are checked">
+    <h2>How every deal was checked</h2>
+    <ol class="method-steps">
+      <li><strong>Found on the day.</strong> Each deal was found in a store or a deals roundup published on Black Friday, 27 November 2026 — never carried over from an earlier sale.</li>
+      <li><strong>Price read, not assumed.</strong> The sale price and the usual price were read from the store or from a deals source that names the store. The discount on each card is computed from those two prices, so they always agree.</li>
+      <li><strong>Verdict with evidence.</strong> A deal is labelled by what the numbers say: a new low is the lowest price ever seen for the model; a strong deal is 40% or more off; a good deal is 20–39% off; a routine sale is under 20% off — worth knowing before you buy.</li>
+    </ol>
+    <p class="method-note">Prices move all day on Black Friday. The “View at store” link opens the product at its store — confirm the price there before you buy. Where the same product is cheaper at a second store we checked, the card says so.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>DealHunt is an independent deal finder and is not affiliated with Amazon, Best Buy, Walmart, Target, or Nintendo. All prices in US dollars, as checked 27 November 2026, 08:00 UTC.</p>
+    <p>Deals this page checked: 24 · Stores: Amazon, Best Buy, Walmart, Target, Nintendo.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
